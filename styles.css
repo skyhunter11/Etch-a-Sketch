@@ -8,10 +8,33 @@
     grid-gap: 1em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
+    margin: auto;
+    height: 700px;
+    width: 700px;
+    border: solid black 1px;
   }
+
+  body {
+    display: flex;
+    align-items: center;
+    background-color: tan;
+  }
+
+  button {
+    height: 50px;
+  }
+
   
   .grid-item {
     padding: 1em;
     border: 1px solid #ddd;
     text-align: center;
+  }
+
+  .my-color-class {
+    background-color: forestgreen;
+  }
+
+  .clear-canvas-class {
+    background-color: white;
   }
