@@ -20,13 +20,19 @@ resizeBtn.addEventListener('click', () => {
      for (i = 0; i < squares.length; i++) {
             squares[i].remove();
      }
+
 // draws new grid from prompt input
     let newSizeInt = Number(prompt('Enter new grid size'));
     container.style.setProperty('grid-rows', newSizeInt);
     container.style.setProperty('grid-cols', newSizeInt);
     for (c = 0; c < (newSizeInt * newSizeInt); c++) {
         let cell = document.createElement('div');
-        cell.innerText = (c + 1);
+        cell.innerText = (c + 1 + ' hi');
+
+        // cell.style.height = (700/newSizeInt);
+        // cell.style.width = (700/newSizeInt);
+        cell.classList.add('resize-class');
+
         container.appendChild(cell).className = 'grid-item';
         cell.addEventListener('mouseover', e => e.target.classList.add('my-color-class'));
       };
