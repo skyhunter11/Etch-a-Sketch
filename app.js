@@ -19,7 +19,6 @@ function drawGrid(rows, cols) {
     container.style.setProperty('--grid-cols', cols);
     for (c = 0; c < (rows * cols); c++) {
       let cell = document.createElement('div');
-      // cell.innerText = (c + 1);
       container.appendChild(cell).className = 'grid-item';
       // add color class when hovered over
       cell.addEventListener('mouseover', e => e.target.classList.add('my-color-class'));
@@ -35,6 +34,7 @@ function clearGrid() {
 
 function resizeGrid() {
     const cells = document.querySelectorAll('.grid-item');
+    //clears old grid
     for (i = 0; i < cells.length; i++) {
            cells[i].remove();
     };

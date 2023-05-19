@@ -18,7 +18,7 @@
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     margin: auto;
-    height: 60%;
+    height: 80%;
     width: 60%;
     border: solid black 1px;
     /**/
@@ -28,23 +28,6 @@
     height: 50px;
   }
   
-  .grid-item {
-    /* padding: 1em; */
-    border: .5px solid #ddd;
-    text-align: center;
-  }
-
   .my-color-class {
     background-color: forestgreen;
   }
-
-  .clear-canvas-class {
-    background-color: white;
-  }
-
-
-   .resize-class {
-    background-color: blueviolet;
-    height: 5px;
-    width: 5px;
-   }
