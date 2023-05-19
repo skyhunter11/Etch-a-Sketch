@@ -21,11 +21,14 @@
     height: 80%;
     width: 60%;
     border: solid black 1px;
-    /**/
   }
 
   button {
     height: 50px;
+  }
+
+  .my-erase-class{
+    background-color: white;
   }
   
   .my-color-class {

@@ -2,7 +2,7 @@
 
 // Declare container and draw grid
 const container = document.getElementById('container');
-drawGrid(99, 99);
+drawGrid(64, 64);
 
 // label clear button
 const clearBtn = document.getElementById('clear');
@@ -12,8 +12,19 @@ clearBtn.addEventListener('click', clearGrid);
 const resizeBtn = document.getElementById('resize');
 resizeBtn.addEventListener('click', resizeGrid);
 
+// label eraser button
+const eraseBtn = document.getElementById('erase')
+eraseBtn.addEventListener('click', eraseGrid);
+
 
 // Functions //
+function eraseGrid () {
+    const cells = document.querySelectorAll('.grid-item');
+    for (i = 0; i < cells.length; i++){
+        cells[i].addEventListener('mouseover', e => e.target.classList.remove('my-color-class'));
+    };
+};
+
 function drawGrid(rows, cols) {
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
