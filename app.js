@@ -40,5 +40,8 @@ function resizeGrid() {
     };
 // draws new grid from prompt input
    let newSizeInt = Number(prompt('Enter new grid size'));
-   drawGrid(newSizeInt,newSizeInt);
+   if (newSizeInt > 100) {
+    alert("Please enter positive integer equal to or less than 100");
+   }
+   else drawGrid(newSizeInt,newSizeInt);
 };
