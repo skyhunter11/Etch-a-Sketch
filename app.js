@@ -40,15 +40,17 @@ function resizeGrid() {
     };
 // draws new grid from prompt input
    let newSizeInt = Number(prompt('Enter new grid size'));
-   container.style.setProperty('grid-rows', newSizeInt);
-   container.style.setProperty('grid-cols', newSizeInt);
-   //
-   for (c = 0; c < (newSizeInt * newSizeInt); c++) {
-        let cell = document.createElement('div');
-        // cell.innerText = (c + 1);
-        container.appendChild(cell).className = 'grid-item';
-        //cell.classList.add('resize-class');
-        // add color class when hovered over
-        cell.addEventListener('mouseover', e => e.target.classList.add('my-color-class'));
-     };
+   drawGrid(newSizeInt,newSizeInt);
+
+//    container.style.setProperty('grid-rows', newSizeInt);
+//    container.style.setProperty('grid-cols', newSizeInt);
+//    //
+//    for (c = 0; c < (newSizeInt * newSizeInt); c++) {
+//         let cell = document.createElement('div');
+//         // cell.innerText = (c + 1);
+//         container.appendChild(cell).className = 'grid-item';
+//         //cell.classList.add('resize-class');
+//         // add color class when hovered over
+//         cell.addEventListener('mouseover', e => e.target.classList.add('my-color-class'));
+//      };
 };
