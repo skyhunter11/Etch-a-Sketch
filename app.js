@@ -2,7 +2,7 @@
 
 // Declare container and draw grid
 const container = document.getElementById('container');
-drawGrid(10, 10);
+drawGrid(99, 99);
 
 // label clear button
 const clearBtn = document.getElementById('clear');
@@ -19,7 +19,7 @@ function drawGrid(rows, cols) {
     container.style.setProperty('--grid-cols', cols);
     for (c = 0; c < (rows * cols); c++) {
       let cell = document.createElement('div');
-      cell.innerText = (c + 1);
+      // cell.innerText = (c + 1);
       container.appendChild(cell).className = 'grid-item';
       // add color class when hovered over
       cell.addEventListener('mouseover', e => e.target.classList.add('my-color-class'));
@@ -44,13 +44,11 @@ function resizeGrid() {
    container.style.setProperty('grid-cols', newSizeInt);
    //
    for (c = 0; c < (newSizeInt * newSizeInt); c++) {
-       let cell = document.createElement('div');
-       cell.innerText = (c + 1);
-       cell.style.height = (700/newSizeInt);
-       cell.style.width = (700/newSizeInt);
-       //cell.classList.add('resize-class');
-       container.appendChild(cell).className = 'grid-item';
-       // add color class when hovered over
-       cell.addEventListener('mouseover', e => e.target.classList.add('my-color-class'));
+        let cell = document.createElement('div');
+        // cell.innerText = (c + 1);
+        container.appendChild(cell).className = 'grid-item';
+        //cell.classList.add('resize-class');
+        // add color class when hovered over
+        cell.addEventListener('mouseover', e => e.target.classList.add('my-color-class'));
      };
 };
